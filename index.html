@@ -31,7 +31,7 @@ body:before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-
 .seg button.on{color:#06101f}.s{display:none}
 button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 .btn{display:inline-block;border:0;cursor:pointer;text-decoration:none;font:600 .9rem var(--f);color:#06101f;background:linear-gradient(135deg,var(--acc),var(--acc2));padding:10px 18px;border-radius:99px;box-shadow:0 8px 30px -8px rgba(110,168,255,.7);transition:transform .25s}
-.btn:hover{transform:translateY(-2px)}.btn.g{background:rgba(255,255,255,.07);color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn:hover{transform:translateY(-2px)}.btn.g{background:rgba(255,255,255,.07);color:var(--ink);border:1px solid var(--line);box-shadow:none}.btn.wa{background:linear-gradient(135deg,#34d399,#22c55e);box-shadow:0 8px 30px -8px rgba(52,211,153,.6)}.btn[hidden]{display:none}
 .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding:56px 20px 40px}
 .re{animation:up .7s backwards}
 .eye{display:inline-flex;gap:9px;align-items:center;padding:6px 14px;border-radius:99px;font-size:.82rem;color:var(--mut);animation:up .7s backwards}
@@ -77,7 +77,7 @@ input,select{width:100%;padding:11px 14px;border-radius:12px;border:1px solid va
 .opts{display:flex;flex-wrap:wrap;gap:8px}.opt{padding:8px 14px;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);font:500 .82rem var(--f);cursor:pointer;transition:.2s}.opt.on{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#06101f;border-color:transparent}
 .slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.slots .opt{padding:8px 0;text-align:center}
 .er{color:#ff9a9a;font-size:.85rem;margin:10px 0 0}.w{width:100%;margin-top:22px;padding:13px}
-.sum{padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:.88rem;display:grid;gap:4px;margin:14px 0}
+.sum{padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:.88rem;line-height:1.55;white-space:pre-line;max-height:260px;overflow:auto;margin:14px 0}
 @media(max-width:820px){.hero{grid-template-columns:1fr}.ph{order:-1}}
 @media(max-width:760px){.l,.lk,.bn,.nb{display:none}.s{display:inline}.seg button{padding:7px 11px}.pipe .st{font-size:.66rem}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -112,7 +112,7 @@ input,select{width:100%;padding:11px 14px;border-radius:12px;border:1px solid va
 <section id="expertise" class="wrap sec"><h2 data-k="ext"></h2><p class="sub" data-k="exs"></p><div class="grid sw" id="ch"></div></section>
 <section id="projects" class="wrap sec"><h2 data-k="pjt"></h2><p class="sub" data-k="pjs"></p><div class="grid sw" id="pj"></div></section>
 <section id="contact" class="wrap sec"><div class="card glass cta"><h2 data-k="cth"></h2><p class="sub" data-k="cts"></p><button class="btn" data-open data-k="bk2"></button>
- <div class="links"><a href="mailto:wannachaiprem@gmail.com">wannachaiprem@gmail.com</a><a href="tel:+62811145597">+62 811 145 597</a><a href="https://www.linkedin.com/in/pathrawut-wannachai-51b037128" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
+ <div class="links"><a href="mailto:wannachaiprem@gmail.com">wannachaiprem@gmail.com</a><a href="https://wa.me/62811145597" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.linkedin.com/in/pathrawut-wannachai-51b037128" target="_blank" rel="noopener">LinkedIn</a></div></div></section>
 </main>
 <footer class="ft" data-k="ft"></footer>
 <div class="modal" id="md"><div class="mb glass" role="dialog" aria-modal="true">
@@ -122,17 +122,17 @@ input,select{width:100%;padding:11px 14px;border-radius:12px;border:1px solid va
   <label data-k="mc"></label><input name="co" required placeholder="PT …">
   <label data-k="mp"></label><select name="pos" id="ps"><option>Network Engineer</option><option>IT Project Manager</option><option value="o" data-k="o"></option></select>
   <input name="po" id="po" hidden style="margin-top:8px">
-  <label data-k="mpl"></label><div class="opts" id="pf"></div>
+  <label data-k="mpl"></label><div class="opts" id="pf"></div><label data-k="mv"></label><div class="opts" id="vf"></div>
   <label data-k="md"></label><input type="date" name="dt" id="dt" required>
   <label data-k="mtm"></label><div class="slots" id="sl"></div>
   <p class="er" id="er" hidden data-k="er"></p>
   <button class="btn w" data-k="ms"></button>
  </form>
- <div id="ok" hidden><h3 data-k="ok"></h3><p class="sub" data-k="okd"></p><div class="sum" id="sum"></div><div class="row"><a class="btn" id="ml" data-k="ml"></a><button class="btn g" data-close data-k="dn"></button></div></div>
+ <div id="ok" hidden><h3 data-k="ok"></h3><p class="sub" data-k="okd"></p><div class="sum" id="sum"></div><div class="row"><a class="btn" id="ml" data-k="ml"></a><a class="btn wa" id="wa" data-k="wa" target="_blank" rel="noopener"></a><button class="btn g" data-close data-k="dn"></button></div></div>
 </div></div>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-let L=/^id/i.test(navigator.language)?1:0,R=0,sl="",pl="Zoom";const p=a=>a[L];
+let L=/^id/i.test(navigator.language)?1:0,R=0,sl="",pl="Zoom",vi="Email";const p=a=>a[L];
 const S={xp:["Experience","Pengalaman"],ex:["Expertise","Keahlian"],pj:["Projects","Proyek"],ct:["Contact","Kontak"],bk:["Book a meeting","Jadwalkan"],
 eye:["Open to opportunities, Bekasi, West Java","Terbuka untuk peluang, Bekasi, Jawa Barat"],bk2:["Book an interview","Jadwalkan wawancara"],vx:["View experience","Lihat pengalaman"],
 xps:["Where I have delivered. Client names are kept confidential.","Tempat saya berkarya. Nama klien dirahasiakan."],
@@ -142,8 +142,8 @@ ed:["Education","Pendidikan"],edv:["Bachelor of Business Information Technology,
 lg:["Languages","Bahasa"],lgv:["English (Proficient), Bahasa Indonesia (Native)","Inggris (Mahir), Bahasa Indonesia (Asli)"],
 cth:["Let’s build something reliable.","Mari bangun sesuatu yang andal."],cts:["Book an interview or a meeting. I reply with the meeting link.","Jadwalkan wawancara atau pertemuan. Saya balas dengan tautan meeting."],
 ft:["© 2026 Pathrawut Wannachai. Currently at PT Pathra Raya Sejahtera, Bekasi.","© 2026 Pathrawut Wannachai. Saat ini di PT Pathra Raya Sejahtera, Bekasi."],
-mt:["Book an interview","Jadwalkan wawancara"],mn:["Your name","Nama Anda"],mc:["Company (PT)","Perusahaan (PT)"],mp:["Position offered","Posisi yang ditawarkan"],o:["Other…","Lainnya…"],mpl:["Platform","Platform"],md:["Date","Tanggal"],mtm:["Time slot (WIB, UTC+7)","Slot waktu (WIB, UTC+7)"],ms:["Request meeting","Ajukan jadwal"],er:["Pick a time slot to continue.","Pilih slot waktu untuk melanjutkan."],
-ok:["Request ready","Permintaan siap"],okd:["Send it by email to confirm. I will reply with the meeting link.","Kirim lewat email untuk konfirmasi. Saya akan membalas dengan tautan meeting."],ml:["Send by email","Kirim lewat email"],dn:["Done","Selesai"],
+mt:["Book an interview","Jadwalkan wawancara"],mn:["Your name","Nama Anda"],mc:["Company (PT)","Perusahaan (PT)"],mp:["Position offered","Posisi yang ditawarkan"],o:["Other…","Lainnya…"],mpl:["Platform","Platform"],md:["Date","Tanggal"],mtm:["Time slot (WIB, UTC+7)","Slot waktu (WIB, UTC+7)"],ms:["Continue","Lanjutkan"],er:["Pick a time slot to continue.","Pilih slot waktu untuk melanjutkan."],
+ok:["Your message is ready","Pesan Anda siap"],okd:["Have a quick look, then tap send. I will reply with the meeting link.","Silakan periksa sebentar, lalu ketuk kirim. Saya akan membalas dengan tautan meeting."],mv:["Send request via","Kirim permintaan lewat"],ml:["Send by email","Kirim lewat email"],wa:["Send via WhatsApp","Kirim lewat WhatsApp"],dn:["Done","Selesai"],
 an:["Client anonymised","Klien dianonimkan"],cu:["Current","Saat ini"],pf:["Delivery flow on every project","Alur pengerjaan di setiap proyek"]};
 const PIPE=[["Survey","Survei"],["Design","Desain"],["Deploy","Implementasi"],["Secure","Pengamanan"],["Handover","Serah terima"]];
 const RO=[{t:"Network Engineer",job:"IT Infrastructure / Network Engineer",
@@ -180,20 +180,21 @@ $("#pj").innerHTML=PJ.map((x,i)=>`<div class="card glass" style="--i:${i}"><div 
 $("#po").placeholder=p(["Position title","Nama posisi"]);}
 $("#sl").innerHTML=[9,10,11,12,13,14,15,16].map(h=>`<button type="button" class="opt" data-s="${h}">${String(h).padStart(2,"0")}:00</button>`).join("");
 $("#pf").innerHTML=["Zoom","Google Meet","Microsoft Teams"].map((x,i)=>`<button type="button" class="opt${i?"":" on"}" data-p="${x}">${x}</button>`).join("");
-$("#dt").min=new Date().toISOString().slice(0,10);
+$("#vf").innerHTML=["Email","WhatsApp"].map((x,i)=>`<button type="button" class="opt${i?"":" on"}" data-via="${x}">${x}</button>`).join("");$("#dt").min=new Date().toISOString().slice(0,10);
 const M=$("#md"),openM=()=>{$("#f").hidden=false;$("#ok").hidden=true;M.classList.add("open")},closeM=()=>M.classList.remove("open");
-document.addEventListener("click",e=>{const t=e.target.closest("[data-r],[data-l],[data-open],[data-close],[data-s],[data-p]");if(!t)return;const d=t.dataset;
+document.addEventListener("click",e=>{const t=e.target.closest("[data-r],[data-l],[data-open],[data-close],[data-s],[data-p],[data-via]");if(!t)return;const d=t.dataset;
 if(d.r!=null){R=+d.r;render()}else if(d.l!=null){L=+d.l;render()}else if(d.open!=null)openM();else if(d.close!=null)closeM();
 else if(d.s){sl=d.s;$$("[data-s]").forEach(b=>b.classList.toggle("on",b==t));$("#er").hidden=true}
-else if(d.p){pl=d.p;$$("[data-p]").forEach(b=>b.classList.toggle("on",b==t))}});
+else if(d.p){pl=d.p;$$("[data-p]").forEach(b=>b.classList.toggle("on",b==t))}else if(d.via){vi=d.via;$$("[data-via]").forEach(b=>b.classList.toggle("on",b==t))}});
 M.addEventListener("click",e=>{if(e.target==M)closeM()});document.addEventListener("keydown",e=>{if(e.key=="Escape")closeM()});
 $("#ps").onchange=e=>{const o=e.target.value=="o";$("#po").hidden=!o;$("#po").required=o};
 $("#f").addEventListener("submit",e=>{e.preventDefault();if(!sl){$("#er").hidden=false;return}
 const f=new FormData(e.target),pos=f.get("pos")=="o"?f.get("po"):f.get("pos"),h=+sl,t=x=>String(x).padStart(2,"0")+":00",
-d=["Name: "+f.get("nm"),"Company: "+f.get("co"),"Position: "+pos,"Platform: "+pl,"Date: "+f.get("dt"),"Time: "+t(h)+"–"+t(h+1)+" WIB (UTC+7)"];
-$("#sum").innerHTML=d.map(x=>`<div>${esc(x)}</div>`).join("");
-$("#ml").href="mailto:wannachaiprem@gmail.com?subject="+encodeURIComponent("Interview request: "+f.get("co"))+"&body="+encodeURIComponent(d.join("\n"));
-$("#f").hidden=true;$("#ok").hidden=false});
+nm=f.get("nm"),co=f.get("co"),dt=new Date(f.get("dt")+"T00:00:00").toLocaleDateString(L?"id-ID":"en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"}),tm=t(h)+"–"+t(h+1),
+g=L?`Yth. Pathrawut Wannachai,\n\nPerkenalkan, saya ${nm} dari ${co}. Saya telah melihat portofolio Anda dan ingin mengundang Anda untuk wawancara pada posisi ${pos}.\n\nApakah jadwal ${dt}, pukul ${tm} WIB (UTC+7) sesuai untuk Anda? Kami dapat bertemu melalui ${pl}.\n\nMohon konfirmasinya, atau usulkan waktu lain yang lebih sesuai.\n\nHormat saya,\n${nm}\n${co}`:`Dear Pathrawut,\n\nMy name is ${nm} from ${co}. I came across your portfolio and would like to invite you to an interview for the ${pos} position.\n\nWould ${dt} at ${tm} WIB (UTC+7) work for you? We can meet on ${pl}.\n\nPlease let me know if that time suits you, or suggest another slot that is more convenient.\n\nKind regards,\n${nm}\n${co}`;
+$("#sum").textContent=g;
+$("#ml").href="mailto:wannachaiprem@gmail.com?subject="+encodeURIComponent((L?"Undangan wawancara ":"Interview invitation for ")+pos+" ("+co+")")+"&body="+encodeURIComponent(g);$("#wa").href="https://wa.me/62811145597?text="+encodeURIComponent(g);
+$("#ml").hidden=vi!="Email";$("#wa").hidden=vi!="WhatsApp";$("#f").hidden=true;$("#ok").hidden=false});
 render();
 </script>
 </body>
